@@ -53,7 +53,7 @@ x_lbl <- gsub("Mean","_CombinedMean",x_lbl)
 colnames(finalData) = x_lbl;
 
 ## aggregate columns that aren't activity_type or activity_id or subject_id
-finalData_temp  = finalData[,names(finalData) != 'activity_Type'];
+finalData_temp <- finalData[,names(finalData) != 'activity_Type'];
 tidy <- aggregate(finalData_temp[,names(finalData_temp) 
         !=   c('activity_Id','subject_Id')],
              by=list(activity_Id=finalData_temp$activity_Id,
