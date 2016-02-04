@@ -63,4 +63,4 @@ tidy <- aggregate(finalData_temp[,names(finalData_temp)
 tidy <- merge(aActive, tidy, by='activity_Id', all.x=TRUE);
 
 ## write out complete set
-write.table(tidy, './tidyData.txt',row.names=TRUE,sep='\t');
+write.table(tidy, './myset_mean.txt',row.names=TRUE,sep='\t');
